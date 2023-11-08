@@ -11,38 +11,20 @@ const Gnb = () => {
     <GnbWapper>
       <ul>
         <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to="/">
-            <AiFillHome /> Dashboard
-          </Link>
+          <Link to="/">Dashboard</Link>
         </li>
         <li className={location.pathname === "/drops" ? "active" : ""}>
-          <Link to="/drops">
-            <AiOutlineShoppingCart />
-            drops
-          </Link>
+          <Link to="/drops">drops</Link>
         </li>
         <li className={location.pathname === "/ranking" ? "active" : ""}>
-          <Link to="/ranking">
-            <BsBarChartFill />
-            ranking
-          </Link>
+          <Link to="/ranking">ranking</Link>
         </li>
       </ul>
-
-      {/* <ul>
-                <li className={location.pathname === '/' ? 'active' : ''}>
-                    <Link to="/">홈</Link>
-                </li>
-                <li className={location.pathname === '/about' ? 'active' : ''}>
-                    <Link to="/about">소개</Link>
-                </li>
-            </ul> */}
     </GnbWapper>
   );
 };
 
 const GnbWapper = styled.nav`
-
   ul {
     display: flex;
     li {
@@ -55,7 +37,6 @@ const GnbWapper = styled.nav`
       &.active {
         a {
           color: var(--primary-dark);
-          font-weight: 700;
           svg {
             color: var(--primary);
           }

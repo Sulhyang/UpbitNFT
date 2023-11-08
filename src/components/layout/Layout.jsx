@@ -1,21 +1,13 @@
-import { Box } from "@chakra-ui/react";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import History from "../common/History";
-import Title from "../common/Tilte";
+
 import styled from "styled-components";
 
-const Layout = ({ pagename, title, children }) => {
+const Layout = ({ children }) => {
   return (
     <Wrap>
       <Header />
-      <MainWrap>
-        <Box>
-          <History pagename={pagename} />
-          <Title title={title} />
-        </Box>
-        {children}
-      </MainWrap>
+      <MainWrap>{children}</MainWrap>
       <Footer />
     </Wrap>
   );
@@ -27,9 +19,7 @@ const Wrap = styled.div`
 `;
 
 const MainWrap = styled.main`
-  /* height: calc(100vh - 80px); */
-  height: 200vh;
-  padding: 50px 20px;
+  padding-top: 50px;
 `;
 
 export default Layout;

@@ -2,14 +2,17 @@ import { extendTheme } from "@chakra-ui/react";
 import { textTheme } from "./components/text";
 import { tableTheme } from "./components/table";
 import { progressTheme } from "./components/progress";
-// import { containerTheme } from './components/container';
+import { tabsTheme } from "./components/tabs";
+import { containerTheme } from "./components/container";
 
 const theme = extendTheme({
   components: {
     // Container: containerTheme,
     Text: textTheme,
+    Tabs: tabsTheme,
     Table: tableTheme,
     Progress: progressTheme,
+    Container: containerTheme,
   },
   styles: {
     global: {
@@ -19,7 +22,7 @@ const theme = extendTheme({
       },
       body: {
         bg: "white",
-        fontFamily: "Poppins",
+        fontFamily: "Noto Sans KR",
         fontSize: "16px",
         fontWeight: "400",
         color: "#2B3674",
