@@ -1,8 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { AiFillHome, AiOutlineShoppingCart } from "react-icons/ai";
-import { BsBarChartFill } from "react-icons/bs";
 
 const Gnb = () => {
   const location = useLocation();
@@ -10,14 +8,17 @@ const Gnb = () => {
   return (
     <GnbWapper>
       <ul>
-        <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to="/">Dashboard</Link>
-        </li>
         <li className={location.pathname === "/drops" ? "active" : ""}>
-          <Link to="/drops">drops</Link>
+          <Link to="/drops">드롭스</Link>
         </li>
-        <li className={location.pathname === "/ranking" ? "active" : ""}>
-          <Link to="/ranking">ranking</Link>
+        <li className={location.pathname === "/marketplace" ? "active" : ""}>
+          <Link to="/marketplace">마켓플레이스</Link>
+        </li>
+        <li className={location.pathname === "/trend" ? "active" : ""}>
+          <Link to="/trend">트렌드</Link>
+        </li>
+        <li className={location.pathname === "/mypage" ? "active" : ""}>
+          <Link to="/mypage">마이페이지</Link>
         </li>
       </ul>
     </GnbWapper>
@@ -36,9 +37,9 @@ const GnbWapper = styled.nav`
       }
       &.active {
         a {
-          color: var(--primary-dark);
+          color: #000;
           svg {
-            color: var(--primary);
+            color: #000;
           }
         }
       }
@@ -48,10 +49,10 @@ const GnbWapper = styled.nav`
         gap: 10px;
         height: 80px;
         padding: 0 20px;
-        color: var(--secondary-grey-600);
+        color: #ccc;
         font-weight: 500;
         &:hover {
-          color: var(--primary-dark);
+          color: #333;
         }
       }
       svg {

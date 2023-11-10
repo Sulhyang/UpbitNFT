@@ -34,7 +34,6 @@ import {
   //
   SimpleGrid,
   VStack,
-  background,
 } from "@chakra-ui/react";
 
 import slide1 from "../assets/images/main/silide1.jpg";
@@ -982,6 +981,8 @@ const ImgBox = styled(Box)``;
 const ContainerInner = styled(Box)`
   width: 100%;
   background: #67192f;
+  padding-top: 80px;
+  padding-bottom: 100px;
 `;
 const SlideWrap = styled.div`
   width: 100%;
